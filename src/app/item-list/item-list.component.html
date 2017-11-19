@@ -1,0 +1,11 @@
+<ul>
+  <div *ngFor='let item of itemsObservable | async'>
+    <ngb-alert type="info" [dismissible]="false">
+      <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+      <p>{{ item.description }}</p>
+      <div>
+        <a href="{{ item.url }}" target="_blank" class="btn btn-danger">Go To Item</a>
+      </div>
+    </ngb-alert>
+  </div>
+</ul>
